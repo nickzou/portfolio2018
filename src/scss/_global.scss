@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: $header-height;
+  a {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+  }
+}
