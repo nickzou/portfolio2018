@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress -p",
-    "watch": "webpack --progress -watch && node-sass -o css src/scss/ -w"
+    "webpack-build": "webpack --progress -p",
+    "webpack-watch": "webpack --watch",
+    "node-sass-watch": "node-sass -o css src/scss/ -w",
+    "watch": "npm run node-sass-watch && npm run webpack-watch"
   },
   "author": "Nick Zou",
   "license": "ISC",

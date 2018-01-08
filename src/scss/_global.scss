@@ -7,6 +7,109 @@
   a {
     display: inline-block;
     width: auto;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+  .logo-image {
+    position: absolute;
+    top: -60px;
+  }
+  .logo-text {
+    position: relative;
+    text-align: center;
+    margin-left: 72px;
+    @media #{$tablet-portrait} {
+      margin-left: 57px;
+    }
+    @media #{$phablet-portrait} {
+      margin-left: 27px;
+    }
+    @media #{$phone-small-portrait} {
+      margin-left: 20px;
+    }
+  }
+  .logo-subtext {
+    position: relative;
+    text-align: center;
+    margin-left: 12px;
+    @media #{$tablet-portrait} {
+      margin-left: 8px;
+    }
+    @media #{$phablet-portrait} {
+      margin-left: 4px;
+    }
+  }
+}
+.menu-button {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: none;
+  z-index: 2;
+  cursor: pointer;
+  i {
+    font-size: 30px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  transition: 0.3s ease-out;
+  &.open {
+    left: 0;
+  }
+  >div {
+    width: 100%;
     height: 100%;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  li {
+    flex-basis: 50%;
+    height: 50vh;
+    @media #{$tablet-portrait} {
+      flex-basis: 100%;
+      height: 25vh;
+    }
+    &:first-of-type {
+      background:url("../img/emblem.svg");
+      background-position: -15vw 50%;
+      background-repeat: no-repeat;
+      @media #{$tablet-portrait} {
+        background-position: 50% 50%;
+      }
+    }
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend h2;
+    transition: 0.3s;
+    padding-left: 15px;
+    @media #{$phablet-portrait} {
+      padding-left: 7px;
+    }
+    &:hover {
+      background-color: $black-transparent-70;
+      color: white;
+      font-size: 40px;
+    }
   }
 }
